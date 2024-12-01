@@ -26,6 +26,16 @@ jobs:
     
     - name: 检查项目分支
       uses: actions/checkout@main
+
+    - name: 清理磁盘空间
+      uses: jlumbroso/free-disk-space@main
+      with:
+        tool-cache: true        
+        android: true
+        dotnet: true
+        haskell: true
+        large-packages: true
+        swap-storage: true
       
     - name: 查看机器配置
       run: |
@@ -73,7 +83,7 @@ jobs:
     - name: 更新外部插件
       run: cd openwrt && ./scripts/feeds update -a
 
-    - name: 安装外部插件
+    - name: 读取外部插件
       run: cd openwrt && ./scripts/feeds install -a
 
     - name: 加载个人设置

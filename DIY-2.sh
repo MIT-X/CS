@@ -20,8 +20,5 @@ sed -i '/DTS_DIR:=$(LINUX_DIR)/a\BUILD_DATE_PREFIX := $(shell date +'%F')' ./inc
 # 7-只显示CPU型号
 sed -i 's/${g}.*/${a}${b}${c}${d}${e}${f}${hydrid}/g' package/lean/autocore/files/x86/autocore
 
-# 8-增加系统连接数
-sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
-
 # 8-修改主机名称
 sed -i 's/LEDE/OpenWrt/g' package/base-files/files/bin/config_generate

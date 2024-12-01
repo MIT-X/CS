@@ -1,15 +1,14 @@
-# 1-设置默认主题
-# sed -i 's/bootstrap/opentomcat/g' ./feeds/luci/collections/luci/Makefile
-sed -i 's/luci-theme-bootstrap/luci-theme-opentomcat/g' feeds/luci/collections/luci/Makefile
-
-# 2-设置管理地址
+# 1-修改管理地址
 sed -i 's/192.168.1.1/192.168.2.222/g' package/base-files/files/bin/config_generate
 
-# 3-编译内核版本
+# 2-编译内核版本
 sed -i 's/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.12/g' ./target/linux/x86/Makefile
 
-# 4-删除默认密码
+# 3-删除默认密码
 sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-default-settings
+
+# 4-修改默认主题
+sed -i 's/luci-theme-bootstrap/luci-theme-opentomcat/g' feeds/luci/collections/luci/Makefile
 
 # 5-修改时间格式
 sed -i 's/os.date()/os.date("%Y-%m-%d %H:%M:%S")/g' package/lean/autocore/files/*/index.htm

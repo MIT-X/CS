@@ -11,7 +11,7 @@ git clone https://github.com/MIT-X/luci-app-poweroff.git package/luci-app-powero
 git clone https://github.com/MIT-X/luci-theme-opentomcat.git package/luci-theme-opentomcat
 
 # 4-添加 adguardhome 插件
-# git clone https://github.com/MIT-X/luci-app-adguardhome.git package/luci-app-adguardhome
+git clone https://github.com/MIT-X/luci-app-adguardhome.git package/luci-app-adguardhome
 
 # 5-添加 OpenClash 插件
 # sed -i '$a\src-git openclash https://github.com/vernesong/OpenClash' ./feeds.conf.default

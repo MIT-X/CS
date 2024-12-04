@@ -4,6 +4,9 @@ on:
   repository_dispatch:
   workflow_dispatch:
 
+  schedule:
+    - cron: 01 00 * * *
+
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
@@ -23,7 +26,17 @@ jobs:
     
     - name: 检查项目分支
       uses: actions/checkout@main
-    
+
+    - name: 清理磁盘空间
+      uses: jlumbroso/free-disk-space@main
+      with:
+        tool-cache: true        
+        android: true
+        dotnet: true
+        haskell: true
+        large-packages: true
+        swap-storage: true
+      
     - name: 查看机器配置
       run: |
         echo "警告⚠"

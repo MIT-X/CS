@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: 01 00 * * *
+    - cron: 1 1 * * 5
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede

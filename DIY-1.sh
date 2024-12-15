@@ -2,7 +2,7 @@
 # =================================================================================================================
 
 # 1-添加 ShadowSocksR Plus+ 插件
-echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
+# echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 
 # 2-添加 poweroff 插件
 git clone https://github.com/MIT-X/luci-app-poweroff.git package/luci-app-poweroff
@@ -17,5 +17,10 @@ git clone https://github.com/MIT-X/luci-app-adguardhome.git package/luci-app-adg
 # sed -i '$a\src-git openclash https://github.com/vernesong/OpenClash' ./feeds.conf.default
 
 # 6-添加 PassWall 插件
-echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main" >> "feeds.conf.default"
-echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main" >> "feeds.conf.default"
+# echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main" >> "feeds.conf.default"
+# echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main" >> "feeds.conf.default"
+
+
+
+echo "src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+echo "src-git small https://github.com/kenzok8/small' feeds.conf.default
